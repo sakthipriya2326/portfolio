@@ -54,7 +54,7 @@ export default function App() {
       <main id="home">
         <Hero />
         <About />
-        <Projects projects={projects} />
+        <Projects  />
       </main>
 
       {/* Footer / Contact section */}

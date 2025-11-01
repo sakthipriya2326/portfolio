@@ -8,7 +8,8 @@ const ProfileCircle = () => (
     transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.5 }}
     className="inline-flex w-14 h-14 rounded-full border-4 border-white dark:border-slate-900 overflow-hidden shadow-lg items-center justify-center ml-3 flex-shrink-0"
   >
-    <div className="w-full h-full bg-[#C48CB3] flex items-center justify-center">
+    {/* Gradient background matching button style */}
+    <div className="w-full h-full bg-gradient-to-r from-primary to-accent flex items-center justify-center">
       <span className="text-white font-bold text-lg">SP</span>
     </div>
   </motion.div>

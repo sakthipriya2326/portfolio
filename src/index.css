@@ -2,28 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-/* global theme palette, typography, and helpers */
+/* 🌈 Global Theme Palette */
 :root {
-  --color-primary: #0D1E4C;
-  --color-accent: #C48CB3;
-  --color-accent-light: #E5C9D7;
-  --color-secondary: #83A6CE;
+  --color-primary: #0D1E4C;        /* Deep Navy */
+  --color-accent:#f472b6 ;         /* Sky Blue */
+  --color-accent-light:#83A6CE ;   /* Rose Pink */
+  --color-secondary: #E5C9D7;      /* Soft Pastel */
+  --border-color: rgba(131,166,206,0.4); /* Soft blue border */
   --max-width: 1200px;
 }
 
+/* 🌞 Light Mode */
 body {
   @apply bg-white text-slate-800 antialiased;
   font-family: "Inter", system-ui, sans-serif;
   transition: background 0.3s, color 0.3s;
 }
 
+/* 🌚 Dark Mode */
 .dark body {
   background-color: #0b0e2a;
   color: #f1f5f9;
 }
 
+/* 🩵 Gradient Text (Accent → Secondary) */
 .text-gradient {
   background: linear-gradient(90deg, var(--color-accent), var(--color-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* ✨ Glow Utilities (used for soft, elegant card lighting) */
+.shadow-glow {
+  box-shadow: 0 0 10px rgba(131,166,206,0.6);
+}
+
+.shadow-hover {
+  box-shadow: 0 0 15px rgba(131,166,206,0.8);
+}
+
+/* 🎨 Border Utility */
+.border-theme {
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+}
+
+/* 🌫️ Glass Effect (used for frosted panels) */
+.glass-glow {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+}
+.dark .glass-glow {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(131,166,206,0.3);
+}
+
+/* 🌸 Accent Background Shades */
+.bg-accent-light-10 {
+  background-color: rgba(196,140,179,0.1);
+}
+.bg-accent-light-40 {
+  background-color: rgba(196,140,179,0.4);
+}
+.dark .bg-accent-light-10 {
+  background-color: rgba(13,30,76,0.2);
 }
