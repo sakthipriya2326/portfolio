@@ -53,13 +53,16 @@ const About: React.FC = () => {
               title: "Who I Am",
               text: (
                 <>
-                  I'm{" "}
+                  A creative{" "}
                   <span className="font-semibold text-[#f472b6]">
-                    Sakthi Priya S
-                  </span>
-                  , a creative Frontend Developer and UI/UX enthusiast passionate
-                  about designing intuitive and elegant digital experiences. I
-                  love combining{" "}
+                    Frontend Developer
+                  </span>{" "}
+                  and{" "}
+                  <span className="font-medium text-[#c48cb3]">
+                    UI/UX enthusiast
+                  </span>{" "}
+                  passionate about designing intuitive and elegant digital
+                  experiences. I love blending{" "}
                   <span className="font-medium text-[#c48cb3]">
                     creativity and logic
                   </span>{" "}
