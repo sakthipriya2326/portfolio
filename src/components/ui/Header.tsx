@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import ToggleTheme from "./ToggleTheme";
+
 
 type HeaderProps = {
   dark: boolean;
   setDark: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const Header: React.FC<HeaderProps> = ({ dark, setDark }) => {
+const Header: React.FC<HeaderProps> = () => {
   return (
     <motion.header
       initial={{ opacity: 0, y: -15 }}
@@ -27,7 +27,8 @@ const Header: React.FC<HeaderProps> = ({ dark, setDark }) => {
         <div className="hidden dark:block absolute top-1/2 right-0 w-[450px] h-[450px] bg-[#83A6CE]/15 rounded-full blur-[160px]" />
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center relative">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between relative">
+
         
         {/* --- Brand Signature Name --- */}
         <motion.h1
@@ -43,25 +44,25 @@ const Header: React.FC<HeaderProps> = ({ dark, setDark }) => {
           <span className="text-[#C48CB3]">.</span>
         </motion.h1>
 
-        {/* --- Navigation Links --- */}
-        <nav className="hidden md:flex gap-8 text-[15px] font-medium text-[#0D1E4C]/80 dark:text-[#E0E8FF]/80">
-          {["Home", "Projects", "About", "Contact"].map((item) => (
-            <motion.a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              whileHover={{ y: -1 }}
-              transition={{ duration: 0.2 }}
-              className="relative group transition-all"
-            >
-              {item}
-              <span className="absolute left-0 -bottom-1 w-0 h-[1.5px] bg-[#C48CB3] rounded-full transition-all duration-300 group-hover:w-full"></span>
-            </motion.a>
-          ))}
-        </nav>
+      <nav className="hidden md:flex gap-8 ml-auto text-[15px] font-medium text-[#0D1E4C]/80 dark:text-[#E0E8FF]/80">
+  {["Home", "Projects", "About", "Contact"].map((item) => (
+    <motion.a
+      key={item}
+      href={`#${item.toLowerCase()}`}
+      whileHover={{ y: -1 }}
+      transition={{ duration: 0.2 }}
+      className="relative group transition-all"
+    >
+      {item}
+      <span className="absolute left-0 -bottom-1 w-0 h-[1.5px] bg-[#C48CB3] rounded-full transition-all duration-300 group-hover:w-full"></span>
+    </motion.a>
+  ))}
+</nav>
+
 
         {/* --- Theme Toggle --- */}
         <div className="ml-4">
-          <ToggleTheme dark={dark} setDark={setDark} />
+         
         </div>
       </div>
     </motion.header>

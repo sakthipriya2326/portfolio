@@ -72,12 +72,21 @@ const About: React.FC = () => {
               icon: <Lightbulb className="w-6 h-6 text-[#f472b6]" />,
               title: "Inspirations",
               text: (
-                <>
-                  I’m inspired by minimalist design and creators who use
-                  technology to make a real difference. I believe great design
-                  should not just look good — it should feel effortless,
-                  empathetic, and human-centered.
-                </>
+                <div className="flex flex-col gap-3 mt-4">
+                  {["William Hanna", "Virat Kohli", "Senthil Kumar T"].map(
+                    (name) => (
+                      <div
+                        key={name}
+                        className="px-4 py-3 bg-[#fff0f7] dark:bg-[#1b1b36]/80
+                        rounded-xl text-[#0D1E4C] dark:text-[#EDEBFF] font-medium
+                        border border-[#f472b6]/20 hover:scale-[1.02]
+                        shadow-sm transition-transform"
+                      >
+                        {name}
+                      </div>
+                    )
+                  )}
+                </div>
               ),
             },
             {
@@ -88,7 +97,7 @@ const About: React.FC = () => {
                   {skills.tech.map((skill) => (
                     <span
                       key={skill}
-                      className="px-4 py-2 bg-[#f472b6]/10 dark:bg-[#1f1b3d]
+                      className="px-4 py-2 bg-[#f472b6]/10 dark:bg-[#1f1b3d]/70
                       text-[#0D1E4C] dark:text-[#EDEBFF] rounded-full text-sm font-medium
                       shadow-sm hover:scale-105 transition-transform"
                     >
@@ -106,7 +115,7 @@ const About: React.FC = () => {
                   {skills.soft.map((skill) => (
                     <span
                       key={skill}
-                      className="px-4 py-2 bg-[#f472b6]/10 dark:bg-[#1f1b3d]
+                      className="px-4 py-2 bg-[#f472b6]/10 dark:bg-[#1f1b3d]/70
                       text-[#0D1E4C] dark:text-[#EDEBFF] rounded-full text-sm font-medium
                       shadow-sm hover:scale-105 transition-transform"
                     >
@@ -120,8 +129,9 @@ const About: React.FC = () => {
             <motion.div
               key={i}
               whileHover={{ scale: 1.02 }}
-              className="p-8 rounded-2xl bg-white/60 dark:bg-[#13173A]/70
-              border border-[rgba(244,114,182,0.3)] shadow-[0_0_30px_-10px_rgba(244,114,182,0.2)]
+              className="p-8 rounded-2xl bg-white/60 dark:bg-[#13173A]/60
+              border border-[rgba(244,114,182,0.25)]
+              shadow-[0_0_25px_-10px_rgba(244,114,182,0.15)]
               backdrop-blur-md transition-all duration-300"
             >
               <div className="flex items-center gap-3 mb-4">
@@ -130,9 +140,9 @@ const About: React.FC = () => {
                   {item.title}
                 </h3>
               </div>
-              <p className="text-[#0D1E4C]/80 dark:text-[#EDEBFF]/80 leading-relaxed">
+              <div className="text-[#0D1E4C]/80 dark:text-[#EDEBFF]/80 leading-relaxed">
                 {item.text}
-              </p>
+              </div>
             </motion.div>
           ))}
         </div>

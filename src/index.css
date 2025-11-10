@@ -29,6 +29,7 @@ body {
 .text-gradient {
   background: linear-gradient(90deg, var(--color-accent), var(--color-secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -69,3 +70,18 @@ body {
 .dark .bg-accent-light-10 {
   background-color: rgba(13,30,76,0.2);
 }
+@keyframes pulseBlur {
+  0%, 100% {
+    filter: blur(4px) brightness(1);
+    opacity: 0.8;
+  }
+  50% {
+    filter: blur(6px) brightness(1.2);
+    opacity: 1;
+  }
+}
+
+.animate-pulseBlur {
+  animation: pulseBlur 3.5s ease-in-out infinite;
+}
+
