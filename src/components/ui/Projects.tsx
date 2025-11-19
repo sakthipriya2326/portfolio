@@ -30,7 +30,7 @@ const projectList: Project[] = [
     title: "Python & AI Internship",
     year: "2025",
     description:
-      "Explored Python and basic AI concepts through freelance projects. Worked with data handling, logic building, and backend workflows to strengthen technical foundations.",
+      "Explored Python and basic AI concepts through a project. Worked with data handling, logic building, and backend workflows to strengthen technical foundations.",
   },
 ];
 
