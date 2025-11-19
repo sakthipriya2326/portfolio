@@ -8,6 +8,7 @@ const About: React.FC = () => {
       "React",
       "React Native",
       "Figma",
+      "Python",
       "Tailwind CSS",
       "JavaScript",
       "UI/UX Design",
